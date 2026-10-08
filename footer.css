@@ -46,10 +46,20 @@ nav a:hover {
 }
 
 .foot-name {
-    font-size: clamp(1.4rem, 4vw, 2.4rem);
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    font-size: clamp(1.3rem, 3.6vw, 2.2rem);
     font-weight: 800;
-    letter-spacing: 4px;
-    color: #ffffff;
+    letter-spacing: 1.5px;
+    line-height: 1.25;
+    background: linear-gradient(92deg, #f3d97b 0%, #d4af37 45%, #b8912a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #d4af37;
+}
+
+.foot-tag, .foot-links a, .foot-copy {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
 }
 
 .foot-tag {
