@@ -39,61 +39,41 @@ nav a:hover {
     font-size: clamp(8px, 1vw, 30px);
 }
 
-.center {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.foot-main {
     text-align: center;
-    position: relative;
+    padding: 34px 20px 40px;
+    border-top: 1px solid rgba(255,255,255,0.12);
 }
 
-#rafay {
-    font-size: 18vw;
-    font-weight: bold;
-    letter-spacing: 20px;
+.foot-name {
+    font-size: clamp(1.4rem, 4vw, 2.4rem);
+    font-weight: 800;
+    letter-spacing: 4px;
     color: #ffffff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    user-select: none;
 }
 
-/* floating robot */
-.robot {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2000;
-    perspective: 600px;
-    transition: transform 0.1s ease-out;
+.foot-tag {
+    color: rgba(255,255,255,0.75);
+    margin: 10px auto 18px;
+    font-size: 0.95rem;
+    max-width: 640px;
 }
 
-.robot-head {
-    width: 150px;
-    height: 110px;
-    background: #0a0a0a;
-    border-radius: 15px;
-    box-shadow: 0 0 25px #00ff55 inset, 0 0 20px #003300;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    position: relative;
-}
-
-.eye {
-    width: 22px;
-    height: 22px;
-    background: white;
-    border-radius: 50%;
+.foot-links a {
+    color: #e9cf7a;
+    text-decoration: none;
+    font-weight: 600;
     margin: 0 12px;
-    transition: transform 0.1s ease-in-out;
+    font-size: 0.95rem;
+}
+
+.foot-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.foot-copy {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.85rem;
+    margin-top: 20px;
 }
