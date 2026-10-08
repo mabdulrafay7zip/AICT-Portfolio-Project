@@ -168,6 +168,36 @@ footer{margin-top:80px;border-top:1px solid rgba(212,175,55,.16);background:rgba
 .foot-links a:hover{color:#fff;text-decoration:underline}
 .foot-copy{color:rgba(232,237,247,.5);font-size:.85rem;margin-top:20px}
 
+
+/* story */
+.story{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+@media(max-width:860px){.story{grid-template-columns:1fr}}
+.story .ph{border-radius:22px;overflow:hidden;border:1px solid rgba(212,175,55,.35);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.story .ph img{width:100%;height:420px;object-fit:cover;object-position:top center}
+.story .big{font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.45;font-weight:600}
+.story .big em{color:var(--gold2);font-style:normal}
+.story p{color:var(--mut);margin-top:14px;font-size:.96rem}
+.facts{margin-top:22px;border-top:1px solid rgba(212,175,55,.16)}
+.facts div{display:flex;justify-content:space-between;gap:14px;padding:10px 2px;border-bottom:1px solid rgba(212,175,55,.12);font-size:.9rem}
+.facts div span:first-child{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:2px;color:var(--gold2);text-transform:uppercase;padding-top:3px}
+.facts div span:last-child{color:var(--ink);font-weight:500;text-align:right}
+
+/* timeline */
+.tl{position:relative;margin-left:8px;padding-left:34px;border-left:1px solid rgba(212,175,55,.25)}
+.tl-item{position:relative;padding:0 0 34px}
+.tl-item:last-child{padding-bottom:4px}
+.tl-item::before{content:"";position:absolute;left:-41px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);box-shadow:0 0 0 5px rgba(212,175,55,.12)}
+.tl-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.tl-top h3{font-size:1.18rem}
+.tl-date{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:1.5px;color:#0a0f1e;background:linear-gradient(135deg,var(--gold2),var(--gold));padding:4px 11px;border-radius:999px;font-weight:600}
+.tl-item p{color:var(--mut);font-size:.94rem;max-width:640px;margin-top:5px}
+
+/* scroll cue */
+.cue{display:flex;align-items:center;gap:10px;margin-top:34px;color:var(--mut2);font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:3px;text-transform:uppercase}
+.cue .wheel{width:22px;height:36px;border:1px solid rgba(212,175,55,.5);border-radius:12px;position:relative}
+.cue .wheel::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:4px;background:var(--gold);animation:wheel 1.8s ease-in-out infinite}
+@keyframes wheel{0%{transform:translateY(0);opacity:1}70%{transform:translateY(10px);opacity:0}100%{transform:translateY(0);opacity:0}}
+
 /* reveal */
 .rv{opacity:1;transform:none}
 .js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
@@ -191,6 +221,7 @@ footer{margin-top:80px;border-top:1px solid rgba(212,175,55,.16);background:rgba
       <span><span class="bname">Muhammad Abdul Rafay</span><br><span class="bsub">AI · ML Developer</span></span>
     </a>
     <nav>
+      <a href="#story">Story</a>
       <a href="#journey">Journey</a>
       <a href="#projects">Projects</a>
       <a href="#hobbies">Hobbies</a>
@@ -214,6 +245,7 @@ footer{margin-top:80px;border-top:1px solid rgba(212,175,55,.16);background:rgba
           <a class="btn btn-ghost" href="https://github.com/mabdulrafay7zip" target="_blank" rel="noopener">GitHub Profile</a>
         </div>
         <div class="hero-meta">Based in Islamabad, Pakistan · Working worldwide</div>
+        <div class="cue"><span class="wheel"></span> Scroll to Explore</div>
       </div>
       <div class="arch-wrap">
         <div class="arch"><img src="./images/raffay.jpeg" alt="Muhammad Abdul Rafay"></div>
@@ -233,17 +265,39 @@ footer{margin-top:80px;border-top:1px solid rgba(212,175,55,.16);background:rgba
   <!-- MARQUEE -->
   <div class="marquee" aria-hidden="true"><div class="track" id="mtrack"></div></div>
 
+
+  <!-- MY SHORT STORY -->
+  <section id="story" class="wrap" style="padding-top:80px">
+    <div class="sec-head rv">
+      <div><div class="kicker">About Me</div><h2>My Short Story</h2></div>
+    </div>
+    <div class="story">
+      <div class="ph rv"><img src="./images/raffay.jpeg" alt="Muhammad Abdul Rafay"></div>
+      <div class="rv">
+        <p class="big">I am Rafay — an AI student who believes the best way to learn machine learning is to <em>build things that work</em>, not just read about them.</p>
+        <p>My journey started at Air University, Islamabad, where I am pursuing my BS in Artificial Intelligence. What began with programming fundamentals quickly turned into a fascination with data — cleaning it, questioning it, and teaching machines to find patterns in it.</p>
+        <p>Since then I have completed three machine learning internships, trained models that reach up to 97.5% accuracy, and shipped live projects — including a Netflix recommender that anyone in the world can open and try right now.</p>
+        <div class="facts">
+          <div><span>University</span><span>Air University, Islamabad</span></div>
+          <div><span>Degree</span><span>BS Artificial Intelligence</span></div>
+          <div><span>Focus</span><span>Machine Learning · NLP · Recommenders</span></div>
+          <div><span>Location</span><span>Islamabad, Pakistan · Remote worldwide</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- JOURNEY -->
   <section id="journey" class="wrap">
     <div class="sec-head rv">
       <div><div class="kicker">My Journey</div><h2>Explore the journey<br>that defined my skills</h2></div>
       <p>Four chapters — from the first lines of code at Air University to shipping real machine learning projects.</p>
     </div>
-    <div class="chapters">
-      <article class="chapter rv"><div class="no">01</div><span class="tag">Chapter One</span><h3>Foundations in Computing</h3><p>I began my BS in Artificial Intelligence at Air University, Islamabad — where my journey into programming and problem-solving started.</p></article>
-      <article class="chapter rv"><div class="no">02</div><span class="tag">Chapter Two</span><h3>Python &amp; Data</h3><p>Python became my main tool. With NumPy and Pandas, I learned to turn raw, messy data into clear insight.</p></article>
-      <article class="chapter rv"><div class="no">03</div><span class="tag">Chapter Three</span><h3>Machine Learning</h3><p>I trained my first models with scikit-learn — prediction, classification and recommendation systems that actually work.</p></article>
-      <article class="chapter rv"><div class="no">04</div><span class="tag">Chapter Four</span><h3>Building &amp; Shipping</h3><p>Three ML internships later, I ship real projects — including a live Netflix recommender demo anyone can try.</p></article>
+    <div class="tl">
+      <article class="tl-item rv"><div class="tl-top"><h3>Foundations in Computing</h3><span class="tl-date">2025</span></div><p>I began my BS in Artificial Intelligence at Air University, Islamabad — where my journey into programming and problem-solving started.</p></article>
+      <article class="tl-item rv"><div class="tl-top"><h3>Python &amp; Data</h3><span class="tl-date">2025 — 2026</span></div><p>Python became my main tool. With NumPy and Pandas, I learned to turn raw, messy data into clear insight — the foundation everything else stands on.</p></article>
+      <article class="tl-item rv"><div class="tl-top"><h3>Machine Learning</h3><span class="tl-date">2026</span></div><p>I trained my first models with scikit-learn — prediction, classification and recommendation systems that actually work, including a character recognition model at 97.5% accuracy.</p></article>
+      <article class="tl-item rv"><div class="tl-top"><h3>Building &amp; Shipping</h3><span class="tl-date">Sep — Nov 2026</span></div><p>Three ML internships later, I ship real projects — including a live Netflix recommender demo anyone can try, and a portfolio of documented work on GitHub.</p></article>
     </div>
   </section>
 
