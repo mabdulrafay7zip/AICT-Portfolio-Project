@@ -1,209 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Contact — Muhammad Abdul Rafay</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #111010 0%, #1e1e1e 100%);
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Animated Background Ornaments */
-        body::before,
-        body::after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            z-index: -1;
-            filter: blur(100px);
-        }
-
-        body::before {
-            background: rgba(255, 0, 0, 0.2);
-            top: -100px;
-            left: -100px;
-            animation: float 10s infinite alternate;
-        }
-
-        body::after {
-            background: rgba(0, 255, 255, 0.2);
-            bottom: -100px;
-            right: -100px;
-            animation: float 8s infinite alternate-reverse;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translate(0, 0);
-            }
-
-            100% {
-                transform: translate(50px, 50px);
-            }
-        }
-
-        .glass-form {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            max-width: 500px;
-            width: 100%;
-            transition: transform 0.3s ease;
-        }
-
-        .glass-form:hover {
-            transform: translateY(-5px);
-        }
-
-        legend {
-            font-weight: 700;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(to right, #ff0000, #00ffff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: center;
-        }
-
-        .form-label {
-            font-weight: 500;
-            margin-left: 0.5rem;
-            font-size: 0.9rem;
-            color: #ccc;
-        }
-
-        .form-control,
-        .form-select {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-            border-radius: 10px;
-            padding: 0.8rem 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-control:focus,
-        .form-select:focus {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: #00ffff;
-            box-shadow: 0 0 0 0.2rem rgba(0, 255, 255, 0.25);
-            color: #fff;
-        }
-
-        .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .form-check-input {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .form-check-input:checked {
-            background-color: #ff0000;
-            border-color: #ff0000;
-        }
-
-        .btn-premium {
-            background: linear-gradient(135deg, #ff0000 0%, #00ffff 100%);
-            border: none;
-            border-radius: 10px;
-            padding: 0.8rem 2rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            width: 100%;
-            margin-top: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
-            color: #000;
-            /* Dark text usually looks better on bright cyan/red */
-        }
-
-        .btn-premium:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 255, 255, 0.5);
-            background: linear-gradient(135deg, #00ffff 0%, #ff0000 100%);
-            color: #000;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 576px) {
-            .glass-form {
-                padding: 2rem;
-                margin: 1rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Muhammad Abdul Rafay</title>
+<meta name="description" content="Contact Muhammad Abdul Rafay — BS Artificial Intelligence, Air University Islamabad. Open to AI/ML internships, projects and collaboration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  :root{ --gold:#d4af37; --gold2:#e9cf7a; --ink:#eef2f8; --mut:#a9b8c9; }
+  *{ box-sizing:border-box; }
+  body{
+    font-family:'Poppins',sans-serif; color:var(--ink); min-height:100vh;
+    background:
+      radial-gradient(900px 480px at 85% -10%, rgba(212,175,55,.16), transparent 60%),
+      radial-gradient(700px 500px at -10% 110%, rgba(47,109,179,.20), transparent 60%),
+      linear-gradient(180deg,#050a18,#081226);
+    padding: 28px 16px 40px;
+  }
+  .topbar{ max-width:1060px; margin:0 auto 26px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  .brand{ font-weight:800; letter-spacing:2px; color:#fff; font-size:.98rem; }
+  .brand span{ color:var(--gold); }
+  .back{ color:var(--gold2); text-decoration:none; font-weight:600; border:1px solid rgba(212,175,55,.5); padding:8px 16px; border-radius:999px; transition:.2s; }
+  .back:hover{ background:rgba(212,175,55,.14); color:#fff; }
+  .wrap{ max-width:1060px; margin:0 auto; display:grid; grid-template-columns: 1fr 1.15fr; gap:22px; }
+  @media (max-width: 860px){ .wrap{ grid-template-columns:1fr; } }
+  .panel{
+    background: rgba(255,255,255,.045); border:1px solid rgba(212,175,55,.25);
+    border-radius:20px; padding:30px; backdrop-filter: blur(10px);
+    box-shadow: 0 18px 44px rgba(0,0,0,.35);
+  }
+  h1{ font-size:2rem; font-weight:800; margin-bottom:8px; }
+  h1 .g{ background:linear-gradient(92deg,var(--gold2),var(--gold)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub{ color:var(--mut); line-height:1.6; margin-bottom:22px; }
+  .ccard{
+    display:flex; gap:14px; align-items:center; text-decoration:none; color:var(--ink);
+    background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.10);
+    border-radius:14px; padding:14px 16px; margin-bottom:12px; transition:.2s;
+  }
+  .ccard:hover{ border-color:rgba(212,175,55,.6); transform:translateY(-2px); color:#fff; }
+  .ccard .ic{ font-size:1.35rem; }
+  .ccard b{ display:block; font-size:.95rem; }
+  .ccard small{ color:var(--mut); }
+  .form-label{ font-weight:500; font-size:.9rem; color:#dbe6f2; }
+  .form-control,.form-select{
+    background: rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.18); color:#fff;
+    border-radius:10px; padding:.75rem 1rem;
+  }
+  .form-control:focus,.form-select:focus{
+    background: rgba(255,255,255,.10); border-color:var(--gold); color:#fff;
+    box-shadow:0 0 0 .2rem rgba(212,175,55,.22);
+  }
+  .form-control::placeholder{ color:rgba(255,255,255,.45); }
+  .form-select option{ color:#111; }
+  .btn-gold{
+    background:linear-gradient(135deg,var(--gold2),var(--gold)); color:#14100a; border:none;
+    font-weight:700; letter-spacing:.4px; border-radius:10px; padding:.85rem 2rem; width:100%;
+    transition:.2s; box-shadow:0 10px 24px rgba(212,175,55,.28);
+  }
+  .btn-gold:hover{ transform:translateY(-2px); box-shadow:0 14px 30px rgba(212,175,55,.4); color:#14100a; }
+  .note{ color:var(--mut); font-size:.88rem; margin-top:14px; line-height:1.55; }
+  footer{ max-width:1060px; margin:26px auto 0; text-align:center; color:#7d8ea3; font-size:.88rem; }
+</style>
 </head>
-
 <body>
-    <div class="glass-form">
-        <form id="contactForm">
-            <legend>Get in Touch</legend>
-            <div class="mb-4">
-                <label for="nameInput" class="form-label">Full Name</label>
-                <input type="text" id="nameInput" class="form-control" placeholder="Your name" required name="name">
-            </div>
-            <div class="mb-4">
-                <label for="emailInput" class="form-label">Email Address</label>
-                <input type="email" id="emailInput" class="form-control" placeholder="you@example.com" required name="email">
-            </div>
-            <div class="mb-4">
-                <label for="subjectSelect" class="form-label">Subject</label>
-                <select id="subjectSelect" class="form-select">
-                    <option selected disabled>Choose a topic...</option>
-                    <option value="1">General Inquiry</option>
-                    <option value="2">Project Proposal</option>
-                    <option value="3">Feedback</option>
-                </select>
-            </div>
-            <div class="mb-4">
-                <label for="messageInput" class="form-label">Message</label>
-                <textarea class="form-control" id="messageInput" rows="4" placeholder="Write your message..." required name="message"></textarea>
-            </div>
-            <p style="color:#aaa;font-size:.9rem;margin-bottom:1rem;">This form opens your email app with the message addressed to <b style="color:#fff;">mabdulrafay1134@gmail.com</b> — or write to me directly any time.</p>
-            <button type="submit" class="btn btn-primary btn-premium">Send Message</button>
-        </form>
+
+<div class="topbar">
+  <div class="brand">MUHAMMAD <span>ABDUL RAFAY</span></div>
+  <a class="back" href="./index.html">← Back to Portfolio</a>
+</div>
+
+<div class="wrap">
+  <div class="panel">
+    <h1>Get in <span class="g">Touch</span></h1>
+    <p class="sub">I am open to AI/ML internships, project collaboration and freelance work. Reach me directly through any of these — I usually reply within 24–48 hours.</p>
+
+    <a class="ccard" href="mailto:mabdulrafay1134@gmail.com">
+      <span class="ic">✉️</span>
+      <span><b>Email</b><small>mabdulrafay1134@gmail.com</small></span>
+    </a>
+    <a class="ccard" href="https://github.com/mabdulrafay7zip" target="_blank" rel="noopener">
+      <span class="ic">💻</span>
+      <span><b>GitHub</b><small>github.com/mabdulrafay7zip</small></span>
+    </a>
+    <a class="ccard" href="https://www.linkedin.com/in/mabdulrafay7" target="_blank" rel="noopener">
+      <span class="ic">💼</span>
+      <span><b>LinkedIn</b><small>linkedin.com/in/mabdulrafay7</small></span>
+    </a>
+    <div class="ccard" style="cursor:default;">
+      <span class="ic">📍</span>
+      <span><b>Location</b><small>Islamabad, Pakistan · Working remotely worldwide</small></span>
     </div>
-    <a href="./index.html" style="position:absolute;top:20px;left:24px;color:#fff;text-decoration:none;font-weight:600;">← Back to Portfolio</a>
+  </div>
 
-    <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        var name = document.getElementById('nameInput').value.trim();
-        var email = document.getElementById('emailInput').value.trim();
-        var topic = document.getElementById('subjectSelect');
-        var topicText = topic.options[topic.selectedIndex] ? topic.options[topic.selectedIndex].text : 'General Inquiry';
-        var msg = document.getElementById('messageInput').value.trim();
-        var subject = encodeURIComponent('Portfolio Contact: ' + topicText);
-        var body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
-        window.location.href = 'mailto:mabdulrafay1134@gmail.com?subject=' + subject + '&body=' + body;
-    });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+  <div class="panel">
+    <form id="contactForm">
+      <div class="mb-3">
+        <label for="nameInput" class="form-label">Full Name</label>
+        <input type="text" id="nameInput" name="name" class="form-control" placeholder="Your name" required>
+      </div>
+      <div class="mb-3">
+        <label for="emailInput" class="form-label">Email Address</label>
+        <input type="email" id="emailInput" name="email" class="form-control" placeholder="you@example.com" required>
+      </div>
+      <div class="mb-3">
+        <label for="subjectSelect" class="form-label">Subject</label>
+        <select id="subjectSelect" class="form-select">
+          <option selected>General Inquiry</option>
+          <option>Internship Opportunity</option>
+          <option>Project Proposal</option>
+          <option>Feedback</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="messageInput" class="form-label">Message</label>
+        <textarea class="form-control" id="messageInput" name="message" rows="5" placeholder="Write your message..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-gold">Send Message</button>
+      <p class="note">The form opens your email app with the message addressed to me — nothing is stored on this website.</p>
+    </form>
+  </div>
+</div>
+
+<footer>© 2026 Muhammad Abdul Rafay — BS Artificial Intelligence, Air University Islamabad</footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var name = document.getElementById('nameInput').value.trim();
+  var email = document.getElementById('emailInput').value.trim();
+  var topic = document.getElementById('subjectSelect').value;
+  var msg = document.getElementById('messageInput').value.trim();
+  var subject = encodeURIComponent('Portfolio Contact: ' + topic);
+  var body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
+  window.location.href = 'mailto:mabdulrafay1134@gmail.com?subject=' + subject + '&body=' + body;
+});
+</script>
 </body>
-
 </html>
